@@ -352,7 +352,7 @@ void
 seek (int fd, unsigned position) 
 {
   lock_acquire (&filesys_lock);
-  struct File *file = get_file (fd);
+  struct file *file = get_file (fd);
   if (!file) 
   {
     lock_release (&filesys_lock);
