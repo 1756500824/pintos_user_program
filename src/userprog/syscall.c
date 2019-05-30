@@ -374,6 +374,7 @@ tell (int fd)
     return -1;
   }
   off_t size = file_tell (file);
+  lock_release (&filesys_lock);
   return size;
 }
 
